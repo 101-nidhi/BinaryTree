@@ -62,8 +62,11 @@ public class BinarySearchTree {
             b.insert(70);
             b.insert(60);
             b.insert(80);
+            System.out.println("inorder");
             b.inorder();
+            System.out.println("preorder");
             b.preorder();
+            System.out.println("postorder");
             b.postorder();
            
 
