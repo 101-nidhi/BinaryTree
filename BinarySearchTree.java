@@ -22,8 +22,18 @@ Node root;
     }
     void inorder()
     {
-   
+      inorder1(root);
     }
+    public static void inorder1(Node root)
+   {
+     if(root!=null)
+       {
+           inorder1(root.left);
+            System.out.println(root.data);
+            inorder1(root.right);
+       }
+  }
+
    public void preorder()
     {
    
