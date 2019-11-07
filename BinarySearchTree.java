@@ -17,7 +17,23 @@ Node root;
    
     void insert(int data)
     {
-     
+      root=insertrec(root,data);
+        }
+        Node insertrec(Node root,int data){
+            if(root==null)
+            {
+                root=new Node(data);
+                return root;
+            }
+            if(data<root.data)
+            {
+                root.left=insertrec(root.left,data);
+            }
+            else if(data>root.data)
+            {
+                root.right=insertrec(root.right,data);
+            }
+            return root;
    
     }
     void inorder()
