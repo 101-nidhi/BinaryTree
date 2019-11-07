@@ -1,61 +1,70 @@
 public class BinarySearchTree {
-class Node
-{
-int data;
-Node left,right;
-
-public Node(int data)
-{
-this.data=data;
-left=right=null;
-}
-}
-Node root;
-    BinarySearchTree() {  
-        root = null;  
-    }
-   
-    void insert(int data)
+    class Node
     {
-     
-   
-    }
-    void inorder()
+    int data;
+    Node left,right;
+    
+    public Node(int data)
     {
-      inorder1(root);
+    this.data=data;
+    left=right=null;
     }
-    public static void inorder1(Node root)
-   {
-     if(root!=null)
-       {
-           inorder1(root.left);
-            System.out.println(root.data);
-            inorder1(root.right);
-       }
-  }
-
-   public void preorder()
-    {
-   
     }
-   public void postorder()
-    {
-   
-    }
-    public static void main(String args[])
-    {
-    BinarySearchTree b=new BinarySearchTree();
-    b.insert(60);
-        b.insert(20);
-        b.insert(10);
-        b.insert(40);
-        b.insert(70);
-        b.insert(60);
-        b.insert(80);
-        b.inorder();
-        b.preorder();
-        b.postorder();
+    Node root;
+        BinarySearchTree() {  
+            root = null;  
+        }
        
+        void insert(int data)
+        {
+         
+       
+        }
+        void inorder()
+        {
+          inorder1(root);
+        }
+        public static void inorder1(Node root)
+       {
+         if(root!=null)
+           {
+               inorder1(root.left);
+                System.out.println(root.data);
+                inorder1(root.right);
+           }
+      }
+    
+       public void preorder()
+        {
+           preorder1(root);
+        }
+        public static void preorder1(Node root) 
+            { 
+                if (root!=null) 
+                {
+                System.out.println(root.data+ " "); 
+                 preorder1(root.left); 
+                 preorder1(root.right); 
+                }
+            }
+       public void postorder()
+        {
+       
+        }
+        public static void main(String args[])
+        {
+        BinarySearchTree b=new BinarySearchTree();
+        b.insert(60);
+            b.insert(20);
+            b.insert(10);
+            b.insert(40);
+            b.insert(70);
+            b.insert(60);
+            b.insert(80);
+            b.inorder();
+            b.preorder();
+            b.postorder();
+           
+        }
+    
     }
-
-}
